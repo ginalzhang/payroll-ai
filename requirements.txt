@@ -1,6 +1,7 @@
-streamlit==1.39.0
+streamlit==1.65.0
 pandas==2.2.3
-plotly==5.24.1
+altair==6.3.0
 openai==1.54.3
+httpx<0.28  # openai 1.54 passes `proxies`, which httpx 0.28 removed
 python-dotenv==1.0.1
 numpy==2.1.3
