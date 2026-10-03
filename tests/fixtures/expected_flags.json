@@ -1,0 +1,37 @@
+[
+  {
+    "employee_id": 1,
+    "rule": "underpayment",
+    "severity": "High",
+    "reason": "Salary $71916 is below cohort fence of $82000 (Sales Executive L2, n=52).",
+    "evidence": {
+      "cohort_median": 95000,
+      "cohort_iqr": 18000,
+      "cohort_size": 52,
+      "lower_fence": 68000,
+      "tenure_years": 6
+    }
+  },
+  {
+    "employee_id": 2,
+    "rule": "mismatch",
+    "severity": "High",
+    "reason": "Promoted within 1 years but only received a 3% hike.",
+    "evidence": {
+      "years_since_promotion": 1,
+      "percent_hike": 3
+    }
+  },
+  {
+    "employee_id": 3,
+    "rule": "compression",
+    "severity": "Medium",
+    "reason": "New hire ($65000) earns more than tenured peer #42 ($58000, 6 years).",
+    "evidence": {
+      "peer_id": 42,
+      "peer_salary": 58000,
+      "peer_tenure": 6,
+      "my_tenure": 0
+    }
+  }
+]
