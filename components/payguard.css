@@ -1,0 +1,50 @@
+/* Styles for the clickable HTML blocks. Lives in the component's shadow root. */
+* { box-sizing: border-box; }
+.pg-root { color: #E8EAED; font-family: inherit; font-size: 13.5px; -webkit-font-smoothing: antialiased; }
+button { font-family: inherit; }
+.mono { font-family: 'IBM Plex Mono', monospace; }
+.muted { color: #8A919C; }
+.soft { color: #C9CDD3; }
+.nw { white-space: nowrap; }
+
+.wrap { border: 1px solid #22262D; border-radius: 12px; overflow-x: auto; background: #13161B; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th { text-align: left; font-weight: 500; font-size: 12px; color: #9AA1AC; padding: 12px 14px; border-bottom: 1px solid #22262D; white-space: nowrap; user-select: none; }
+th[data-act] { cursor: pointer; }
+th[data-act]:hover { color: #E8EAED; }
+td { padding: 11px 14px; border-bottom: 1px solid #1D2128; vertical-align: middle; }
+th.r, td.r { text-align: right; }
+tbody tr:last-child td { border-bottom: none; }
+tr[data-act] { cursor: pointer; }
+tr[data-act]:hover { background: #171A20; }
+tr[data-act]:focus-visible { outline: 2px solid #6FD3B5; outline-offset: -2px; }
+tr.rev { opacity: .6; }
+
+.chips { display: flex; gap: 4px; flex-wrap: wrap; }
+.chip { font-size: 11.5px; padding: 2px 7px; border-radius: 5px; white-space: nowrap; display: inline-block; }
+.sev { display: flex; align-items: center; gap: 8px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
+.empty { padding: 40px; text-align: center; display: flex; flex-direction: column; gap: 8px; align-items: center; font-size: 14px; color: #C9CDD3; }
+
+.btn { height: 36px; padding: 0 14px; border-radius: 8px; font-size: 13px; cursor: pointer; border: 1px solid #2A2F37; background: transparent; color: #E8EAED; }
+.btn.primary { background: #6FD3B5; border-color: #6FD3B5; color: #0E1013; font-weight: 500; }
+.btn.quiet { background: #1D2128; border-color: #1D2128; font-weight: 500; }
+.btn:focus-visible, .sug:focus-visible, .arow:focus-visible { outline: 2px solid #6FD3B5; outline-offset: 2px; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.chat { display: flex; flex-direction: column; gap: 18px; }
+.sugs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.sug { text-align: left; padding: 14px 16px; border-radius: 10px; border: 1px solid #22262D; background: #13161B; color: #E8EAED; font-size: 13.5px; line-height: 1.45; cursor: pointer; }
+.sug:hover { border-color: #3A414C; }
+.sug[disabled] { opacity: .45; cursor: not-allowed; }
+.msg { display: flex; flex-direction: column; gap: 8px; }
+.msg.user { align-items: flex-end; }
+.bubble { max-width: min(640px, 100%); font-size: 14px; line-height: 1.6; white-space: pre-line; color: #E8EAED; }
+.msg.user .bubble { padding: 10px 14px; border-radius: 12px; background: #1D2128; }
+.arows { width: 100%; max-width: 640px; border: 1px solid #22262D; border-radius: 10px; overflow: hidden; }
+.arow { width: 100%; display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px; background: #13161B; border: none; border-bottom: 1px solid #1D2128; color: #E8EAED; font-size: 13px; text-align: left; }
+.arow:last-child { border-bottom: none; }
+button.arow { cursor: pointer; }
+button.arow:hover { background: #171A20; }
+.foot { font-size: 11.5px; color: #8A919C; font-family: 'IBM Plex Mono', monospace; }
+.thinking { font-size: 13px; color: #9AA1AC; }
