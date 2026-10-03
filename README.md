@@ -23,12 +23,19 @@ Cohort = same JobRole AND JobLevel. Requires n ≥ 4 members.
 - 🟠 **Compression** (Medium) — new hire (≤ 1 year) earning more than a peer with ≥ 2 years tenure in the same cohort
 - 🔵 **Promotion / raise mismatch** (High) — promoted within last 2 years but received < 5% hike
 
+## Features
+
+- **Dashboard** — hero exposure number ($4.1M on bundled data), KPI cards, flagged employee table with cohort box plot + histogram evidence
+- **Employee lookup** — search by name, ID, role, or department. Full profile with career timeline (joined, promoted, raise history), flags, cohort comparison, and attributes
+- **Ask PayGuard** — tool-using chat agent. Uses GPT-4o-mini when `OPENAI_API_KEY` is set; runs a local demo-mode chat on the real data when it isn't
+
 ## File layout
 
 ```
-app.py         Streamlit UI (dashboard + chat)
+app.py         Streamlit UI (4 tabs)
 detectors.py   Pure-pandas anomaly rules
-agent.py       OpenAI tool-using chat
+agent.py       OpenAI tool-using chat (live mode)
+demo_agent.py  Local rule-based chat (no-API mode)
 schema.py      Shared constants + column mapping
 data/          IBM HR Analytics dataset
 ```
